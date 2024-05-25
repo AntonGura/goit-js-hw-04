@@ -7,12 +7,26 @@ console.log('/////////TASK2\\\\\\\\\\')
 //     У консоль будуть виведені результати її викликів.
 
 
+// function calcAverageCalories(days) {
+//     let total = 0;
+//     for (const { calories } of days) {
+//         total += calories;
+//     }
+//     return total / 7;
+// }
+
 function calcAverageCalories(days) {
-    let total = 0;
-    for (const { calories } of days) {
-        total += calories;
-    }
-    return total / 7;
+  let total = 0;
+  let count = 0;
+    for (const {calories} of days) {
+      total += calories;
+      count += 1;
+  }
+  if (total) {
+    return total / count
+  } else {
+    return 0
+  }
 }
 
 
